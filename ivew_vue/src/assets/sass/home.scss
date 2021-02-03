@@ -1,0 +1,57 @@
+.home-sider {
+    position: fixed;
+    height: $height;
+
+    .menu-log {
+        background-color: #fff;
+        height: 180px;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .my-menu {
+        height: calc(100% - 180px);
+        overflow: auto;
+        text-align: center;
+
+        .ivu-menu-item-active:not(.ivu-menu-submenu):after {
+            width: 10px;
+            left: 0;
+        }
+    }
+}
+
+.home-layout {
+    position: fixed;
+    left: 250px;
+    height: $height;
+    width: $homeWidth;
+
+    .home-header {
+        position: fixed;
+        height: 60px;
+        line-height: 60px;
+        width: $homeWidth;
+        background-color: #fff;
+        padding: 0px 20px;
+        z-index: 9999;
+    }
+
+    .home-content {
+        position: fixed;
+        top: 80px;
+        width: $homeWidth1;
+        height: calc(100% - 80px);
+        overflow: auto;
+    }
+}
+
+.vertical-center-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ivu-modal {
+        top: 0;
+    }
+}

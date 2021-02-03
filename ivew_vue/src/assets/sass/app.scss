@@ -1,0 +1,14 @@
+@import './index.scss';
+@import './login.scss';
+@import './home.scss';
+@import './header.scss';
+@import './content.scss';
+
+html,
+body,
+#app,
+.app-div {
+    height: $height;
+    width: $width;
+    background-color: #e8eaec;
+}

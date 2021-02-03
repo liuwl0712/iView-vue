@@ -1,0 +1,59 @@
+[
+  {
+    "title": "员工工号",
+    "key": "employeeId",
+    "width": 150,
+    "align": "center"
+  },
+  {
+    "title": "员工姓名",
+    "key": "employeeName",
+    "width": 95,
+    "align": "center"
+  },
+  {
+    "title": "员工手机",
+    "key": "employeePhone",
+    "align": "center"
+  },
+  {
+    "title": "员工学历",
+    "key": "employeeEducation",
+    "width": 95,
+    "align": "center"
+  },
+  {
+    "title": "员工状态",
+    "key": "employeeStatus",
+    "width": 95,
+    "align": "center"
+  },
+  {
+    "title": "员工部门",
+    "key": "staffDepartment",
+    "width": 95,
+    "align": "center"
+  },
+  {
+    "title": "员工邮箱",
+    "key": "employeeMailbox",
+    "align": "center"
+  },
+  {
+    "title": "是否转正",
+    "key": "turnPositive",
+    "width": 95,
+    "align": "center"
+  },
+  {
+    "title": "在职日期",
+    "key": "dateOfEmployment",
+    "align": "center"
+  },
+  {
+    "title": "Action",
+    "slot": "action",
+    "width": 110,
+    "align": "center"
+  }
+]
