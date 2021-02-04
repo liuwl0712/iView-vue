@@ -4,11 +4,11 @@ Vue.use(Vuex);
 
 //store 中存放的就是全局共享数据
 const state = {
-  modalShow: true,
+  avatarSize: "100",
 };
 const mutations = {
-  modalShowChange(state) {
-    state.modalShow = false;
+  avatarSizeChange(state, val) {
+    state.avatarSize = val;
   },
 };
 const actions = {};

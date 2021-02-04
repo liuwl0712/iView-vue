@@ -1,10 +1,21 @@
 <template>
   <div class="app-div">
-    <my-sider class="home-sider"></my-sider>
-    <div class="home-layout">
-      <my-header class="home-header"></my-header>
-      <my-content class="home-content"></my-content>
-    </div>
+    <Layout style="height: 100%;">
+      <Sider hide-trigger style="background: #fff;">
+        <my-sider
+          class="home-sider"
+          ref="sider"
+        ></my-sider>
+      </Sider>
+      <Layout class="home-layout">
+        <Header class="home-header">
+          <my-header @fatherMethod="getFatherMethod"></my-header>
+        </Header>
+        <Content class="home-content">
+          <my-content></my-content>
+        </Content>
+      </Layout>
+    </Layout>
     <Modal
       v-model="modalShow"
       :closable="false"
@@ -36,7 +47,6 @@
 import Menu from "../components/Menu";
 import Header from "../components/Header";
 import Content from "../components/Content";
-import { mapMutations } from "vuex";
 export default {
   name: "Home",
   components: {
@@ -56,6 +66,10 @@ export default {
     modalShowChange() {
       this.modalShow = false;
       sessionStorage.setItem("modalShow", false);
+    },
+    getFatherMethod() {
+      this.$refs.sider.collapsedSider();
+      console.log(1);
     },
   },
 };

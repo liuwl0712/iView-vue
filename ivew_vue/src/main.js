@@ -11,6 +11,9 @@ import router from "./router";
 import animated from "animate.css/animate.css";
 // 引入vuex
 import store from "./vuex/store.js";
+// 引入echarts
+import * as echarts from "echarts";
+Vue.prototype.$echarts = echarts;
 
 Vue.use(animated);
 Vue.use(ViewUI);

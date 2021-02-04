@@ -22,26 +22,17 @@
 }
 
 .home-layout {
-    position: fixed;
-    left: 250px;
-    height: $height;
-    width: $homeWidth;
+    padding-left: 20px;
+    height: 100%;
+    overflow: hidden;
 
     .home-header {
-        position: fixed;
-        height: 60px;
-        line-height: 60px;
-        width: $homeWidth;
-        background-color: #fff;
-        padding: 0px 20px;
-        z-index: 9999;
+        background: #fff;
     }
 
     .home-content {
-        position: fixed;
-        top: 80px;
-        width: $homeWidth1;
-        height: calc(100% - 80px);
+        margin-top: 20px;
+        height: calc(100% - 84px);
         overflow: auto;
     }
 }
