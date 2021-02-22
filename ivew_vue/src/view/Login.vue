@@ -46,6 +46,7 @@
             type="primary"
             long
             @click="loginSubmit('formInline')"
+            :loading="loading"
           >登录</Button>
         </div>
         <div class="login-card-span">
@@ -85,6 +86,7 @@ export default {
           },
         ],
       },
+      loading: false,
     };
   },
   mounted() {
@@ -92,6 +94,7 @@ export default {
   },
   methods: {
     loginSubmit(formInline) {
+      this.loading = true;
       this.$refs[formInline].validate((valid) => {
         if (valid) {
           // 模拟登录，应该使用接口，但是在这里就不使用了
@@ -119,6 +122,7 @@ export default {
             setTimeout(() => {
               this.$Loading.error();
               this.$Message.error("用户密码错误");
+              this.loading = false;
             }, 1000);
           }
         } else {

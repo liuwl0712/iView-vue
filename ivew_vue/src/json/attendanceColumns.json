@@ -1,0 +1,44 @@
+[
+  {
+    "title": "员工姓名",
+    "key": "employeeName",
+    "align": "center"
+  },
+  {
+    "title": "员工部门",
+    "key": "staffDepartment",
+    "width": 95,
+    "align": "center"
+  },
+  {
+    "title": "早退次数",
+    "key": "leaveEarly",
+    "align": "center"
+  },
+  {
+    "title": "迟到次数",
+    "key": "numberOfLate",
+    "align": "center"
+  },
+  {
+    "title": "未打卡次数",
+    "key": "numberOfNotClockedIn",
+    "align": "center"
+  },
+  {
+    "title": "加班次数",
+    "key": "overtime",
+    "align": "center"
+  },
+  {
+    "title": "未写日志次数",
+    "key": "numberOfUnwrittenLogs",
+    "align": "center"
+  },
+  {
+    "title": "Action",
+    "slot": "action",
+    "width": 100,
+    "align": "center"
+  }
+]

@@ -33,6 +33,14 @@ const router = new VueRouter({
           name: "staffManagement",
           component: () => import("../view/StaffManagement.vue"),
           meta: { needLogin: true },
+          children: [
+            {
+              path: "/operationalDatas",
+              name: "operationalDatas",
+              component: () => import("../view/OperationalData.vue"),
+              meta: { needLogin: true },
+            },
+          ],
         },
         {
           path: "/attendanceStatistics",

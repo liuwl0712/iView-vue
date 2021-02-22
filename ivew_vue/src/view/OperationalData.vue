@@ -13,6 +13,7 @@
           v-for="item in dataCol"
           :key="item.id"
           :style="item.style"
+          class="animate__animated animate__bounceIn"
         >
         <h4>{{item.title}}</h4>
         <h2>{{item.num}} 人</h2>
