@@ -1,7 +1,10 @@
 <template>
   <div class="app-div">
     <Layout style="height: 100%;">
-      <Sider hide-trigger style="background: #fff;">
+      <Sider
+        hide-trigger
+        style="background: #fff;"
+      >
         <my-sider
           class="home-sider"
           ref="sider"
@@ -11,6 +14,9 @@
         <Header class="home-header">
           <my-header @fatherMethod="getFatherMethod"></my-header>
         </Header>
+        <div class="content-tag">
+          <my-tag></my-tag>
+        </div>
         <Content class="home-content">
           <my-content></my-content>
         </Content>
@@ -47,12 +53,14 @@
 import Menu from "../components/Menu";
 import Header from "../components/Header";
 import Content from "../components/Content";
+import Tag from "../components/Tag";
 export default {
   name: "Home",
   components: {
     "my-sider": Menu,
     "my-header": Header,
     "my-content": Content,
+    "my-tag": Tag,
   },
   data() {
     return {

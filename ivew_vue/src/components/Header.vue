@@ -28,7 +28,7 @@
       <Divider type="vertical" />
       <span>Gordon</span>
       <Avatar
-        src="https://i.loli.net/2017/08/21/599a521472424.jpg"
+        icon="ios-person"
         class="header-Avatar"
         size="40"
       />

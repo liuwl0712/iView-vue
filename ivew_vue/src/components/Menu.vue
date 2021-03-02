@@ -71,6 +71,11 @@ export default {
   mounted() {
     this.menuName = this.$route.name;
   },
+  watch: {
+    $route: function (to) {
+      this.menuName = to.name;
+    },
+  },
   methods: {
     toRouter(name) {
       this.$router.push(name);
