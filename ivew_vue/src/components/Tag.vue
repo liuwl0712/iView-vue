@@ -68,7 +68,7 @@ export default {
     },
   },
   mounted() {
-    this.rowDrop(); //行拖拽效果
+    this.rowDrop();
     if (this.$route.path != "/operationalData") {
       for (let i = 0; i < this.tags.length; i++) {
         if (this.tags[i].path == "/operationalData") {
@@ -109,11 +109,10 @@ export default {
       const _this = this;
       Sortable.create(el, {
         onEnd({ newIndex, oldIndex }) {
-          //oldIIndex拖放前的位置， newIndex拖放后的位置
           console.log(newIndex);
           console.log(oldIndex);
-          const currRow = _this.tags.splice(oldIndex + 1, 1)[0]; //鼠标拖拽当前的el-tabs-pane
-          _this.tags.splice(newIndex + 1, 0, currRow); //tableData 是存放所以el-tabs-pane的数组
+          const currRow = _this.tags.splice(oldIndex + 1, 1)[0]; 
+          _this.tags.splice(newIndex + 1, 0, currRow);
           console.log(_this.tags);
         },
       });
