@@ -51,6 +51,32 @@ const router = new VueRouter({
           name: "systemManagement",
           component: () => import("../view/SystemManagement.vue"),
           meta: { needLogin: true, title: "系统管理" },
+          children: [
+            {
+              path: "/401Page",
+              name: "401Page",
+              component: () => import("../view/401Page.vue"),
+              meta: { needLogin: true, title: "401页面" },
+            },
+            {
+              path: "/403Page",
+              name: "403Page",
+              component: () => import("../view/403Page.vue"),
+              meta: { needLogin: true, title: "403页面" },
+            },
+            {
+              path: "/404Page",
+              name: "404Page",
+              component: () => import("../view/404Page.vue"),
+              meta: { needLogin: true, title: "404页面" },
+            },
+            {
+              path: "/500Page",
+              name: "500Page",
+              component: () => import("../view/500Page.vue"),
+              meta: { needLogin: true, title: "500页面" },
+            },
+          ],
         },
       ],
     },
