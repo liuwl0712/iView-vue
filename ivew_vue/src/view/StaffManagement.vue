@@ -143,7 +143,6 @@
 </template>
 <script>
 import columns from "../json/staffColumns.json";
-import Tabledata from "../json/staffData.json";
 import StaffEdit from "./StaffEdit.vue";
 export default {
   name: "StaffManagement",
@@ -196,14 +195,23 @@ export default {
         },
       ],
       columns: columns,
-      Tabledata: Tabledata,
+      Tabledata: [],
       loading: false,
       switchView1: true,
       switchView2: false,
       staffEdit: "",
     };
   },
+  mounted() {
+    this.findStaffData();
+  },
   methods: {
+    findStaffData() {
+      this.$axios.findStaffData().then((res) => {
+        console.log(res);
+        this.Tabledata = res;
+      });
+    },
     addStaff(val) {
       this.staffEdit = val;
       if (val == "新增员工" || val == "修改员工") {
