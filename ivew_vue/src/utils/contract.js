@@ -6,3 +6,9 @@ export function findStaffData() {
     method: "get",
   });
 }
+export function findDataCol() {
+  return $axios({
+    url: "/json/dataCol.json",
+    method: "get",
+  });
+}

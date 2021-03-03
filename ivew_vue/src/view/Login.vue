@@ -13,7 +13,7 @@
         class="login-card"
       >
         <Avatar
-          src="https://i.loli.net/2017/08/21/599a521472424.jpg"
+          src="log.png"
           size="60"
         />
         <h1 class="login-card-title">员工薪资管理系统</h1>

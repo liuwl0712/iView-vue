@@ -70,73 +70,23 @@ export default {
   name: "OperationalData",
   data() {
     return {
-      dataCol: [
-        {
-          id: "1",
-          title: "迟到人数",
-          num: "12",
-          style: {
-            backgroundImage: "url(" + require("@/assets/img/1.png") + ")",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            height: "100%",
-          },
-        },
-        {
-          id: "2",
-          title: "早退人数",
-          num: "9",
-          style: {
-            backgroundImage: "url(" + require("@/assets/img/2.png") + ")",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            height: "100%",
-          },
-        },
-        {
-          id: "3",
-          title: "旷工人数",
-          num: "7",
-          style: {
-            backgroundImage: "url(" + require("@/assets/img/3.png") + ")",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            height: "100%",
-          },
-        },
-        {
-          id: "4",
-          title: "未写日志人数",
-          num: "2",
-          style: {
-            backgroundImage: "url(" + require("@/assets/img/4.png") + ")",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            height: "100%",
-          },
-        },
-        {
-          id: "5",
-          title: "未打卡人数",
-          num: "1",
-          style: {
-            backgroundImage: "url(" + require("@/assets/img/5.png") + ")",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            height: "100%",
-          },
-        },
-      ],
+      dataCol: [],
       RadioGroup: "1",
       DatePicker: "",
     };
   },
   mounted() {
+    this.findDataCol();
     setTimeout(() => {
       this.columnarEcharts();
     }, 100);
   },
   methods: {
+    findDataCol() {
+      this.$axios.findDataCol().then((res) => {
+        this.dataCol = res;
+      });
+    },
     columnarEcharts() {
       let columnarChart = this.$echarts.init(
         document.getElementById("myChart"),
