@@ -48,6 +48,10 @@
         <Icon type="ios-cog" />
         <span>系统管理</span>
         </MenuItem>
+        <MenuItem name="componentRealization">
+        <Icon type="ios-cog" />
+        <span>组件实现</span>
+        </MenuItem>
       </Menu>
     </Sider>
   </div>
